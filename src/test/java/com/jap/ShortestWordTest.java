@@ -1,7 +1,6 @@
 package com.jap;
 
 
-import com.jap.ShortestWord;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -30,7 +29,7 @@ public class ShortestWordTest {
         // Test scenario: Input words with same length
         assertEquals("looped", shortestWord.findShortestWord(new String[]{"looped", "poodle", "student", "calmed" }));
         // Test scenario: Input words with empty strings
-        assertEquals("", shortestWord.findShortestWord(new String[]{"Atrocity", "Language", "student"}));
+        assertEquals("student", shortestWord.findShortestWord(new String[]{"Atrocity", "Language", "student"}));
 
     }
 }

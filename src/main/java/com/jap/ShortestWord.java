@@ -5,20 +5,18 @@ public class ShortestWord {
 
         //Declare and initialize a String array.
         String[] words = {"Java", "Programming", "Language"};
-        System.out.println("Words = " + words);
         // Create an object of the class ShortestWord
         ShortestWord shortestWord = new ShortestWord();
         //Call the method findShortestWord() and pass the array.
-        String[] ShortestWord = shortestWord.findShortestWord(String[]words);
-        System.out.println("shortestWord = " + shortestWord);
-
+        String result = shortestWord.findShortestWord(words);
+        System.out.println("ShortestWord = " + result);
     }
 
     //Write the logic to find the shortest word from the String array inside
     // the below method and return the shortest word.
     public String findShortestWord(String[] words) {
         String smallestWord = words[0];
-        for (int index = 0; index <= words.length - 1; index++) {
+        for (int index = 1; index < words.length; index++) {
             if (words[index].length() < smallestWord.length()) {
                 smallestWord = words[index];
             }
